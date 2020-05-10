@@ -10,6 +10,12 @@ menu:
     about: /about
     gallery: /gallery
 
+# post_code
+# normal | night | night blue | night bright | night eighties
+highlight_theme: night bright
+code_copy:
+    enable: true   
+
 # favicon & logo
 favicon: /img/favicon.ico
 logo: /img/logo.png 
@@ -23,7 +29,7 @@ local_search:
     trigger: auto
     # show top n results per article, show all results by setting to -1
     top_n_per_article: 2
-    
+
 # background_image
 # mask_alpha: 0 ~ 1
 # mode: normal | random_you | random_other
@@ -71,6 +77,8 @@ relate:
     posts_limit: 10
     posts_excerpt: 120
 
+
+    
 # post_comment
 comment:
     enable: false

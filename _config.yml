@@ -55,11 +55,7 @@ highlight:
   auto_detect: false
   tab_replace:
 
-# post_code
-# normal | night | night blue | night bright | night eighties
-highlight_theme: night bright
-code_copy:
-    enable: true
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)

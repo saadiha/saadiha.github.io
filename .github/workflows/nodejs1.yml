@@ -1,4 +1,4 @@
-- name: Hexo Action
+- name: hexo
   uses: sma11black/hexo-action@v1.0.1
   with:
     # Github user name

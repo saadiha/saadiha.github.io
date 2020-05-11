@@ -1,0 +1,2 @@
+- name: GitHub Action for Hexo
+  uses: heowc/action-hexo@1.0.2-add-metadata

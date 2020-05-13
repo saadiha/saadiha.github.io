@@ -38,6 +38,7 @@ motto:
 #This is only a demo, please go to "https://time.is" to set your city time!
 timejs:
     enable: true
+    source: https://time.is
     
 #########################################################################################################
 # 002-PROLOADER

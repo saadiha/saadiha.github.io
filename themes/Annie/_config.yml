@@ -11,8 +11,8 @@ menu:
     gallery: /gallery
 
 # favicon & logo
-favicon: https://raw.githubusercontent.com/saadiha/gallery/master/img/20200513151445.jpg
-logo: https://raw.githubusercontent.com/saadiha/gallery/master/img/20200513151445.jpg 
+favicon: http://qa0lvqkhi.bkt.clouddn.com/20200513160329.jpg
+logo: http://qa0lvqkhi.bkt.clouddn.com/20200513160329.jpg 
 
 
 # background_image
@@ -25,7 +25,7 @@ mask_alpha: 0.4
 background_image:
     mode: random
     # normal_url: /img/header-bg.jpg 
-    random_you_max: 110
+    random_you_max: 120
     random_you_url: https://github.com/saadiha/Random-img
     random_other_url: https://github.com/saadiha/Random-img
 
@@ -34,8 +34,6 @@ background_image:
 motto:
 	enable: true
 	source: local
-# show current time
-#This is only a demo, please go to "https://time.is" to set your city time!
     
 #########################################################################################################
 # 002-PROLOADER

@@ -11,8 +11,8 @@ menu:
     gallery: /gallery
 
 # favicon & logo
-favicon: /http://qa0lvqkhi.bkt.clouddn.com/bcg.jpg
-logo: /http://qa0lvqkhi.bkt.clouddn.com/bcg.jpg 
+favicon: http://qa0lvqkhi.bkt.clouddn.com/bcg.jpg
+logo: http://qa0lvqkhi.bkt.clouddn.com/bcg.jpg 
 
 
 # background_image

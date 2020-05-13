@@ -36,9 +36,6 @@ motto:
 	source: local
 # show current time
 #This is only a demo, please go to "https://time.is" to set your city time!
-timejs:
-    enable: true
-    source: https://time.is
     
 #########################################################################################################
 # 002-PROLOADER
@@ -46,13 +43,13 @@ timejs:
 # animation: spinner | transition | cyclic
 preloader:
     enable: true
-    animation: spinner
+    animation: transition
 
 #########################################################################################################
 # 003-INDEX
 #########################################################################################################
 # index-style: pure | cart
-index_style: cart
+index_style: pure
 
 # index_cart_cover
 cover: /img/cart_cover.jpg

@@ -34,6 +34,10 @@ background_image:
 motto:
 	enable: true
 	source: local
+# show current time
+#This is only a demo, please go to "https://time.is" to set your city time!
+timejs:
+    enable: true
     
 #########################################################################################################
 # 002-PROLOADER

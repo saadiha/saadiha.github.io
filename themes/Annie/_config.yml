@@ -73,7 +73,7 @@ gitalk:
     enable: true
     clientID: '7ef8bf714f0855be227'
     clientSecret: '8980563bd2e4d6e17c0f7676f3a994a61feeed9b'
-    repo: saadiha.github.io
+    repo: Blog-Comment-Repo
     owner: saadiha
     admin: saadiha
     distractionFreeMode: true
@@ -82,10 +82,14 @@ gitalk:
     
 valine: 
     enable: false
-    appid: 'DU--'
-    appkey: 'DU--'
-    placeholder: no any!
-    
+    appid: 'X8Bwv6fQt39qF3X0LGSOM4V0-9Nh9j0Va'
+    appkey: 'atwww1JxIj4P4b8rpLS4inie'
+    verify: false #验证码
+    notify: false #评论回复提醒
+    avatar: '' #评论列表头像样式：''/mm/identicon/monsterid/wavatar/retro/hide
+    avatar_cdn: 'https://sdn.geekzu.org/avatar/' #头像CDN
+    placeholder: '瞎白话' #评论框占位符
+    pageSize: 15 #评论分页
 livere: 
     enable: false
     livere_uid: 'sdd'

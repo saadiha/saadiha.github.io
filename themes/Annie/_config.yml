@@ -24,7 +24,7 @@ logo: http://qa0lvqkhi.bkt.clouddn.com/20200513160329.jpg
 mask_alpha: 0.4
 background_image:
     mode: random
-    # normal_url: /img/header-bg.jpg 
+    # normal_url: /img/header-bg.jpg \
     random_you_max: 120
     random_you_url: https://github.com/saadiha/Random-img
     random_other_url: https://github.com/saadiha/Random-img

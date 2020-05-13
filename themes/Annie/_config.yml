@@ -23,7 +23,7 @@ logo: http://qa0lvqkhi.bkt.clouddn.com/20200513160329.jpg
 # random_other_url: https://source.unsplash.com/collection/954550/1920x1080 | https://api.berryapi.net/?service=App.Bing.Images&day=-0
 mask_alpha: 0.4
 background_image:
-    mode: normal
+    mode: random
     normal_url: /img/Random-img/0.jpg 
     # random_you_max: 110 
     # random_you_url: https://sariay.github.io/Random-img/

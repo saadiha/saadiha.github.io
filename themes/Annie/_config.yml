@@ -24,9 +24,9 @@ logo: http://qa0lvqkhi.bkt.clouddn.com/20200513160329.jpg
 mask_alpha: 0.4
 background_image:
     mode: random
-    # normal_url: /img/header-bg.jpg \
     random_you_max: 110
-    random_you_url: img/Random-img/
+    # random_you_url: img/Random-img/
+    random_you_url: https://sariay.github.io/Random-img/
     # random_other_url: /img/Random-img/
 
 # motto 

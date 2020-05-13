@@ -103,6 +103,5 @@ theme: Annie
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: https://github.com/Sariay/hexo-theme-Annie
   
 

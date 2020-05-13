@@ -23,10 +23,10 @@ logo: http://qa0lvqkhi.bkt.clouddn.com/20200513160329.jpg
 # random_other_url: https://source.unsplash.com/collection/954550/1920x1080 | https://api.berryapi.net/?service=App.Bing.Images&day=-0
 mask_alpha: 0.4
 background_image:
-    mode: random
-    # normal_url: /img/header-bg.jpg 
+    mode: normal
+    normal_url: /img/header-bg.jpg 
     random_max: 110
-    random_url: /img/Random-img/
+    random_url: https://saadiha.github.io/Random-img/
     # random_other_url: /img/Random-img/
 
 # motto 
@@ -47,7 +47,7 @@ preloader:
 # 003-INDEX
 #########################################################################################################
 # index-style: pure | cart
-index_style: cart
+index_style: pure
 
 # index_cart_cover
 cover: /img/cart_cover.jpg

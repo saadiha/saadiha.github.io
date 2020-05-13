@@ -24,8 +24,9 @@ logo: http://qa0lvqkhi.bkt.clouddn.com/20200513160329.jpg
 mask_alpha: 0.4
 background_image:
     mode: normal
-    normal_url: http://qa0lvqkhi.bkt.clouddn.com/20200513160329.jpg
-    random_you_url: /img/Random-img/
+    normal_url: /img/header-bg.jpg 
+    random_you_max: 110 
+    random_you_url: https://saadiha.github.io/Random-img/
     # random_other_url: https://api.berryapi.net/?service=App.Bing.Images&day=-0
 
 # motto 

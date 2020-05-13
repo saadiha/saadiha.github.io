@@ -23,9 +23,9 @@ logo: https://raw.githubusercontent.com/saadiha/gallery/master/img/2020051315144
 # random_other_url: https://source.unsplash.com/collection/954550/1920x1080 | https://api.berryapi.net/?service=App.Bing.Images&day=-0
 mask_alpha: 0.4
 background_image:
-    mode: normal
+    mode: random
     normal_url: /img/header-bg.jpg 
-    random_you_max: 110 
+    random_you_max: 110
     random_you_url: https://sariay.github.io/Random-img/
     random_other_url: https://api.berryapi.net/?service=App.Bing.Images&day=-0
 

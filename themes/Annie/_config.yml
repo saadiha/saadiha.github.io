@@ -24,9 +24,10 @@ logo: http://qa0lvqkhi.bkt.clouddn.com/20200513160329.jpg
 mask_alpha: 0.4
 background_image:
 mode: random
-normal_url: https://source.unsplash.com/collection/954550/1920x1080
+# normal_url: https://source.unsplash.com/collection/954550/1920x1080
 random_max: 110 
 random_url: https://sariay.github.io/Random-img/
+
 # motto 
 # source: local | hitokoto
 motto:

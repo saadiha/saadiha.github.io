@@ -91,9 +91,9 @@ livere:
     
 # post_count
 leancloud_count:
-    enable: false
-    appid: 'AU8...'
-    appkey: '4cU...'
+    enable: ture
+    appid: 'X8Bwv6fQt39qF3X0LGSOM4V0-9Nh9j0Va'
+    appkey: 'atwww1JxIj4P4b8rpLS4inie'
     serverURLs: 'http'
     like_post:
         enable: true
@@ -104,7 +104,7 @@ leancloud_count:
         limit: 10
 
 busuanzi_count:
-    enable: false
+    enable: true
 
 baidu_analytics:
     enable: false

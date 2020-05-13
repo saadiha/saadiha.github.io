@@ -27,7 +27,7 @@ background_image:
     normal_url: /img/header-bg.jpg 
     random_you_max: 110
     random_you_url: https://github.com/Sariay/Random-img
-    random_other_url: https://api.berryapi.net/?service=App.Bing.Images&day=-0
+    random_other_url: https://github.com/Sariay/Random-img
 
 # motto 
 # source: local | hitokoto

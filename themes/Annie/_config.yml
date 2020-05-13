@@ -24,7 +24,7 @@ logo: https://raw.githubusercontent.com/saadiha/gallery/master/img/2020051315144
 mask_alpha: 0.4
 background_image:
     mode: random
-    normal_url: /img/header-bg.jpg 
+    # normal_url: /img/header-bg.jpg 
     random_you_max: 110
     random_you_url: https://github.com/Sariay/Random-img
     random_other_url: https://github.com/Sariay/Random-img

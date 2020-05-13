@@ -24,10 +24,11 @@ logo: https://raw.githubusercontent.com/saadiha/gallery/master/img/2020051319575
 mask_alpha: 0.4
 background_image:
     mode: normal
+    # normal_url: https://saadiha.github.io/Random-img/
     normal_url: https://source.unsplash.com/collection/954550/1920x1080
-    random_you_max: 110
-    random_you_url: /img/Random_img/
-    random_other_url: https://source.unsplash.com/collection/954550/1920x1080
+    random_max: 110
+    random_url: https://saadiha.github.io/Random-img/
+    random_other_url: https://saadiha.github.io/Random-img/
 
 # motto 
 # source: local | hitokoto
@@ -69,12 +70,12 @@ comment:
     enable: false
 
 gitalk:
-    enable: false
-    clientID: '333--' 
-    clientSecret: '333--' 
-    repo: annie-gitalk 
-    owner: Sariay 
-    admin: Sariay 
+    enable: true
+    clientID: '7ef8bf714f0855be227'
+    clientSecret: '8980563bd2e4d6e17c0f7676f3a994a61feeed9b'
+    repo: saadiha.github.io
+    owner: saadiha
+    admin: saadiha
     distractionFreeMode: true
     #去除 more、index.html、?query=123等格式尾部 
     hrefTrimend: '#.*$,\\?.*$,index.html$' 
@@ -91,7 +92,7 @@ livere:
     
 # post_count
 leancloud_count:
-    enable: ture
+    enable: true
     appid: 'X8Bwv6fQt39qF3X0LGSOM4V0-9Nh9j0Va'
     appkey: 'atwww1JxIj4P4b8rpLS4inie'
     serverURLs: 'http'

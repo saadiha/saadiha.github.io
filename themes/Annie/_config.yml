@@ -27,7 +27,7 @@ background_image:
     random_you_max: 110
     # random_you_url: img/Random-img/
     random_you_url: https://saadiha.github.io/Random-img/
-    # random_other_url: /img/Random-img/
+    random_other_url: https://source.unsplash.com/collection/954550/1920x1080
 
 # motto 
 # source: local | hitokoto

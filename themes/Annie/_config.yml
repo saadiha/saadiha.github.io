@@ -26,8 +26,8 @@ background_image:
     mode: random
     # normal_url: /img/header-bg.jpg 
     random_you_max: 110
-    random_you_url: https://github.com/Sariay/Random-img
-    random_other_url: https://github.com/Sariay/Random-img
+    random_you_url: https://github.com/saadiha/Random-img
+    random_other_url: https://github.com/saadiha/Random-img
 
 # motto 
 # source: local | hitokoto
@@ -49,7 +49,7 @@ preloader:
 # 003-INDEX
 #########################################################################################################
 # index-style: pure | cart
-index_style: pure
+index_style: cart
 
 # index_cart_cover
 cover: /img/cart_cover.jpg

@@ -27,7 +27,7 @@ background_image:
     # normal_url: /img/header-bg.jpg \
     random_you_max: 110
     random_you_url: /img/Random-img/
-    random_other_url: /img/Random-img/
+    # random_other_url: /img/Random-img/
 
 # motto 
 # source: local | hitokoto

@@ -41,7 +41,7 @@ Nav:
 MainFirst:
     name: Oceanstone
     description: Technical  Artist  of  Games   
-    pic_url: http://picgo.oceanstone.xyz//img/20200525113659.jpg
+    pic_url: "/img/me.jpg"
     goto_ulr: ""
 
 Gallery :

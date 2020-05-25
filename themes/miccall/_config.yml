@@ -4,9 +4,9 @@
 
 # Head info
 head:
-    favicon: http://picgo.oceanstone.xyz//img/20200525113040.png
+    favicon: "/img/logo_miccall.png"
     keywords: saadiha poseidon oceanstone
-    backgroundpic : https://source.unsplash.com/collection/954550/1920x1080
+    backgroundpic : "img/bg.jpg"
 
 Intro:
     name: Poseidon'Ocean
@@ -34,7 +34,7 @@ Nav:
         图库 :
             link: "/gallery/"
         标签:
-            link: "/tag/"
+            link: "/tags/"
         #自定义标签名
         #   link：“路径”
 

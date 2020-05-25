@@ -4,9 +4,9 @@
 
 # Head info
 head:
-    favicon: "http://picgo.oceanstone.xyz//img/20200525113040.png"
+    favicon: http://picgo.oceanstone.xyz//img/20200525113040.png
     keywords: saadiha poseidon oceanstone
-    backgroundpic : "https://source.unsplash.com/collection/954550/1920x1080"
+    backgroundpic : https://source.unsplash.com/collection/954550/1920x1080
 
 Intro:
     name: Poseidon'Ocean
@@ -94,8 +94,8 @@ search:
 # Leancloud Views
 leancloud:
     enable: false
-    app_id: #你的 app_id
-    app_key: #你的 app_key
+    app_id: X8Bwv6fQt39qF3X0LGSOM4V0-9Nh9j0Va
+    app_key: atwww1JxIj4P4b8rpLS4inie
     av_core_mini: "https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"
 
 # Busuanzi 不蒜子 Views

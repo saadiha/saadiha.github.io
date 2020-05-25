@@ -1,6 +1,6 @@
 ---
 title: Hello World
-cover: https://raw.githubusercontent.com/saadiha/gallery/master/img/20200513233140.jpg
+thumbnail: https://raw.githubusercontent.com/saadiha/gallery/master/img/20200513233140.jpg
 categories: 杂
 tag: 测试
 ---

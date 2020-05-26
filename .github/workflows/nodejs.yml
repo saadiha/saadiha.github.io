@@ -1,19 +1,22 @@
-- name: Hexo Auto Deploy
-  uses: bluekrow/hexo-auto-deploy@v1.1.0
-  with:
-    # Github secret token that grants access to the destination repository. If the detination repository is the same local repositroy, the token can be obtained using \$\{\{ secrets.GITHUB_TOKEN \}\}
-    token: 
-    # Destination repository name. If not specified the default value is the local repository name
-    repo_name: # optional, default is ${{ github.EVENT.REPOSITORY.NAME }}
-    # Destination repository owner name. If not specified the default value is the local repository owner name
-    owner_name: # optional, default is ${{ github.EVENT.REPOSITORY.OWNER.NAME }}
-    # Destination repository owner email. If not specified the default value is the local repository owner email
-    owner_email: # optional, default is ${{ github.EVENT.REPOSITORY.OWNER.EMAIL }}
-    # Commit message which originated this action execution. If specified, the commit message will be overridden
-    commit_message: # optional, default is ${{ github.EVENT.HEAD_COMMIT.MESSAGE }}
-    # Destination deploy branch. If not specified the default value is "gh-pages"
-    deploy_branch: # optional, default is gh-pages
-    # Local deploy directory to link to the remote repository and branch. If not specified the default value is ".deploy"
-    deploy_dir: # optional, default is .deploy
-    # Local source directory, where the static content has been generated. If not specified the default value is "public"
-    source_dir: # optional, default is public
+on: push
+name: Deploy
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Clean
+      uses: saadiha/saadiha.github.io@master
+      with:
+        args: clean
+    - name: Generate
+      uses: saadiha/saadiha.github.io@master
+      with:
+        args: generate
+    - name: Deploy
+      uses: saadiha/saadiha.github.io@master
+      env:
+        EMAIL: saadiha2016@gmail.com
+        NAME: saadiha
+      with:
+        args: deploy

@@ -1,39 +1,56 @@
 name: Deploy Blog
 
-on: [push] # 当有新push时运行
+on: 
+  push:
+    branches: 
+      - master
 
 jobs:
-  build: # 一项叫做build的任务
-
-    runs-on: ubuntu-latest # 在最新版的Ubuntu系统下运行
-    
+  build:
+    runs-on: ubuntu-latest
     steps:
-    - name: Checkout # 将仓库内master分支的内容下载到工作目录
-      uses: actions/checkout@v1 # 脚本来自 https://github.com/actions/checkout
-      
-    - name: Use Node.js 10.x # 配置Node环境
-      uses: actions/setup-node@v1 # 配置脚本来自 https://github.com/actions/setup-node
+    - name: Checkout source
+      uses: actions/checkout@v2
       with:
-        node-version: "10.x"
-    
-    - name: Setup Hexo env
+        path: main
+    - name: Checkout submodules
+      run: |
+        cd main
+        auth_header="$(git config --local --get http.https://github.com/.extraheader)"
+        git submodule sync --recursive
+        git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
+    - name: Setup node and yarn
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: Install hexo dependencies
+      run: |
+        cd main
+        yarn
+        npm i -g hexo-cli 
+    - name: Generate blog
       env:
-        ACTION_DEPLOY_KEY: ${{ secrets.ACTION_DEPLOY_KEY }}
+        TZ: Asia/Shanghai
       run: |
-        # set up private key for deploy
-        mkdir -p ~/.ssh/
-        echo "$ACTION_DEPLOY_KEY" | tr -d '\r' > ~/.ssh/id_rsa # 配置秘钥
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan github.com >> ~/.ssh/known_hosts
-        # set git infomation
-        git config --global user.name 'saadiha' # 换成你自己的邮箱和名字
-        git config --global user.email 'saadiha2016@gmail.com'
-        # install dependencies
-        npm i -g hexo-cli # 安装hexo
-        npm i
-  
-    - name: Deploy
+        cd main
+        hexo clean
+        hexo generate
+        ls
+    - name: Checkout gh-pages
+      uses: actions/checkout@v2
+      with:
+        path: gh-pages-pre
+        ref: gh-pages
+        fetch-depth: 0
+    - name: Publish to gh-pages
+      env:
+        TZ: Asia/Shanghai
       run: |
-        # publish
-        hexo generate && hexo deploy # 执行部署程序
-
+        mv main/public gh-pages
+        cp -r gh-pages-pre/.git gh-pages/
+        cd gh-pages
+        git config --local user.email "actions@github.com"
+        git config --local user.name "GitHub Action"
+        git add .
+        git commit -m "Auto Delopy at `date +"%Y-%m-%d %H:%M"`"
+        git push origin gh-pages

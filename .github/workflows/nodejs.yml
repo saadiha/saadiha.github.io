@@ -1,56 +1,19 @@
-name: Deploy Blog
-
-on: 
-  push:
-    branches: 
-      - master
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout source
-      uses: actions/checkout@v2
-      with:
-        path: main
-    - name: Checkout submodules
-      run: |
-        cd main
-        auth_header="$(git config --local --get http.https://github.com/.extraheader)"
-        git submodule sync --recursive
-        git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
-    - name: Setup node and yarn
-      uses: actions/setup-node@v1
-      with:
-        node-version: 12.x
-    - name: Install hexo dependencies
-      run: |
-        cd main
-        yarn
-        npm i -g hexo-cli 
-    - name: Generate blog
-      env:
-        TZ: Asia/Shanghai
-      run: |
-        cd main
-        hexo clean
-        hexo generate
-        ls
-    - name: Checkout gh-pages
-      uses: actions/checkout@v2
-      with:
-        path: gh-pages-pre
-        ref: gh-pages
-        fetch-depth: 0
-    - name: Publish to gh-pages
-      env:
-        TZ: Asia/Shanghai
-      run: |
-        mv main/public gh-pages
-        cp -r gh-pages-pre/.git gh-pages/
-        cd gh-pages
-        git config --local user.email "actions@github.com"
-        git config --local user.name "GitHub Action"
-        git add .
-        git commit -m "Auto Delopy at `date +"%Y-%m-%d %H:%M"`"
-        git push origin gh-pages
+- name: Hexo Auto Deploy
+  uses: bluekrow/hexo-auto-deploy@v1.1.0
+  with:
+    # Github secret token that grants access to the destination repository. If the detination repository is the same local repositroy, the token can be obtained using \$\{\{ secrets.GITHUB_TOKEN \}\}
+    token: 
+    # Destination repository name. If not specified the default value is the local repository name
+    repo_name: # optional, default is ${{ github.EVENT.REPOSITORY.NAME }}
+    # Destination repository owner name. If not specified the default value is the local repository owner name
+    owner_name: # optional, default is ${{ github.EVENT.REPOSITORY.OWNER.NAME }}
+    # Destination repository owner email. If not specified the default value is the local repository owner email
+    owner_email: # optional, default is ${{ github.EVENT.REPOSITORY.OWNER.EMAIL }}
+    # Commit message which originated this action execution. If specified, the commit message will be overridden
+    commit_message: # optional, default is ${{ github.EVENT.HEAD_COMMIT.MESSAGE }}
+    # Destination deploy branch. If not specified the default value is "gh-pages"
+    deploy_branch: # optional, default is gh-pages
+    # Local deploy directory to link to the remote repository and branch. If not specified the default value is ".deploy"
+    deploy_dir: # optional, default is .deploy
+    # Local source directory, where the static content has been generated. If not specified the default value is "public"
+    source_dir: # optional, default is public

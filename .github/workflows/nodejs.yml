@@ -25,4 +25,5 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: cnpm install
+    - run: cnpm install hexo-cli -g
     - run: hexo g

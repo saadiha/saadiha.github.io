@@ -1,39 +1,28 @@
-name: Deploy Blog
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-on: [push] # 当有新push时运行
+name: Node.js CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
-  build: # 一项叫做build的任务
+  build:
 
-    runs-on: ubuntu-latest # 在最新版的Ubuntu系统下运行
-    
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x]
+
     steps:
-    - name: Checkout # 将仓库内master分支的内容下载到工作目录
-      uses: actions/checkout@v1 # 脚本来自 https://github.com/actions/checkout
-      
-    - name: Use Node.js 10.x # 配置Node环境
-      uses: actions/setup-node@v1 # 配置脚本来自 https://github.com/actions/setup-node
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
       with:
-        node-version: "10.x"
-    
-    - name: Setup Hexo env
-      env:
-        ACTION_DEPLOY_KEY: ${{ secrets.ACTION_DEPLOY_KEY }}
-      run: |
-        # set up private key for deploy
-        mkdir -p ~/.ssh/
-        echo "$ACTION_DEPLOY_KEY" | tr -d '\r' > ~/.ssh/id_rsa # 配置秘钥
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan github.com >> ~/.ssh/known_hosts
-        # set git infomation
-        git config --global user.name 'saadiha' # 换成你自己的邮箱和名字
-        git config --global user.email 'saadiha2016@gmail.com'
-        # install dependencies
-        npm i -g hexo-cli # 安装hexo
-        npm i
-  
-    - name: Deploy
-      run: |
-        # publish
-        hexo generate && hexo deploy # 执行部署程序
-
+        node-version: ${{ matrix.node-version }}
+    - run: npm install
+    - run: hexo g

@@ -12,7 +12,7 @@ jobs:
         with:
           path: node_modules
           key: ${{runner.OS}}-${{hashFiles('**/package-lock.json')}}
-      - uses: yrpang/github-actions-hexo@master
+      - uses: saadiha/saadiha.github.io@master
         with:
           deploykey: ${{secrets.DEPLOY_KEY}}
           username: saadiha

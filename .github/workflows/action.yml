@@ -1,22 +1,19 @@
-on: push
-name: Deploy
+name: Hexo Build and Deploy
+
+on: [push]
+
 jobs:
   build:
-    name: Build
     runs-on: ubuntu-latest
     steps:
-    - name: Clean
-      uses: saadiha/saadiha.github.io@master
-      with:
-        args: clean
-    - name: Generate
-      uses: saadiha/saadiha.github.io@master
-      with:
-        args: generate
-    - name: Deploy
-      uses: saadiha/saadiha.github.io@master
-      env:
-        EMAIL: saadiha2016@gmail.com
-        NAME: saadiha
-      with:
-        args: deploy
+      - uses: actions/checkout@v1
+      - name: Cache node modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{runner.OS}}-${{hashFiles('**/package-lock.json')}}
+      - uses: yrpang/github-actions-hexo@master
+        with:
+          deploykey: ${{secrets.DEPLOY_KEY}}
+          username: saadiha
+          email: saadiha2016@gmail.com

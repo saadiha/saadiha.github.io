@@ -29,4 +29,4 @@ jobs:
     - run: hexo init blog
     - run: cd blog
     - run: npm install
-    - run: hexo server
+    - run: hexo g

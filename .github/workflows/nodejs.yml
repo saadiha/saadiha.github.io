@@ -26,5 +26,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install
     - run: npm install hexo-cli -g
-    - run: hexo g
-    - run: hexo g
+    - run: hexo init blog
+    - run: cd blog
+    - run: npm install
+    - run: hexo server

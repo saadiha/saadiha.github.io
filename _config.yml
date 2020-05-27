@@ -105,7 +105,8 @@ theme: miccall
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
+
 deploy:
   type: git
-
-  
+  repo: git@github.com:saadiha/saadiha.github.io
+  branch: master
